@@ -36,7 +36,7 @@ func (app EnvApp) Parse(text string) string {
 			output = append(output, EnvOutput{Name: pieces[0], Value: ""})
 		}
 	}
-	jsonData, err := json.Marshal(output)
+	jsonData, err := json.MarshalIndent(output, "", "  ")
 	if err != nil {
 		log.Println(err)
 	}
