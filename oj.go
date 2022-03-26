@@ -42,7 +42,8 @@ func main() {
 			var app *App
 			if cmd == "env" {
 				app = NewApp(apps.NewEnv())
-
+			} else if cmd == "ps" {
+				app = NewApp(apps.NewPS())
 			} else {
 				fmt.Println("Hello")
 			}
